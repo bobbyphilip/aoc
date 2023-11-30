@@ -1,12 +1,12 @@
 package main
 
 import (
-	"fmt"
+	"log"
 	"testing"
 )
 
 func Test00(t *testing.T) {
 
 	res := Solve("")
-	fmt.Println(res)
+	log.Println(res)
 }
