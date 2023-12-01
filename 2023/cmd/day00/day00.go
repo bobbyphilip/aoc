@@ -2,16 +2,14 @@ package main
 
 import (
 	"aoc/internal/utils"
-	"log"
-	"strconv"
+	"fmt"
 )
 
 func main() {
 	result := Solve("2023/data/day00/0.txt")
-	log.Println("day 0 " + result)
+	fmt.Printf("day 0  %d \n", result)
 }
 
-func Solve(file string) string {
-	length := len(utils.ReadFile(file))
-	return strconv.Itoa(length)
+func Solve(file string) int {
+	return len(utils.ReadFile(file))
 }
