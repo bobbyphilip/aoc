@@ -6,10 +6,18 @@ import (
 )
 
 func main() {
-	result := Solve("2023/cmd/day00/0.data")
-	fmt.Printf("day 0  %d \n", result)
+	result := Solve1("2023/cmd/day00/0.data")
+	fmt.Printf("day 00 part 1 %d \n", result)
+	result = Solve2("2023/cmd/day00/1.data")
+	fmt.Printf("day 00 part 2 %d \n", result)
 }
 
-func Solve(file string) int {
-	return len(utils.ReadFile(file))
+func Solve1(file string) int {
+	lines := utils.ReadFile((file))
+	return len(lines)
+}
+
+func Solve2(file string) int {
+	lines := utils.ReadFile((file))
+	return len(lines)
 }
