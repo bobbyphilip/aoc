@@ -15,3 +15,10 @@ func BenchmarkS2(b *testing.B) {
 		Solve2("1.data")
 	}
 }
+
+func TestS2(t *testing.T) {
+	res := Solve2("1.data")
+	if res != 53539 {
+		t.Errorf(" failed was %d expected %d", res, 53539)
+	}
+}
