@@ -7,9 +7,9 @@ import (
 )
 
 func main() {
-	result := Solve1("2023/data/day01/1.txt")
-	fmt.Printf("day 01 %d \n", result)
-	result = Solve2("2023/data/day01/1.txt")
+	result := Solve1("2023/cmd/day01/1.data")
+	fmt.Printf("day 01 part 1 %d \n", result)
+	result = Solve2("2023/cmd/day01/1.data")
 	fmt.Printf("day 01 part 2 %d \n", result)
 }
 
@@ -40,7 +40,6 @@ func findNumber(text string) int {
 			break
 		}
 	}
-	fmt.Printf(" line sum %d \n", result)
 	return result
 }
 
@@ -96,7 +95,6 @@ func findNumber2(text string) int {
 		}
 	}
 	result := first*10 + last
-	fmt.Printf(" line sum %d \n", result)
 	return result
 
 }

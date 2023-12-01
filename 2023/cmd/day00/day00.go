@@ -6,7 +6,7 @@ import (
 )
 
 func main() {
-	result := Solve("2023/data/day00/0.txt")
+	result := Solve("2023/cmd/day00/0.data")
 	fmt.Printf("day 0  %d \n", result)
 }
 
