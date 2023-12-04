@@ -13,11 +13,15 @@ func main() {
 }
 
 func Solve1(file string) int {
+	sum := 0
 	lines := utils.ReadFile((file))
-	return len(lines)
+	sum = len(lines)
+	return sum
 }
 
 func Solve2(file string) int {
+	sum := 0
 	lines := utils.ReadFile((file))
-	return len(lines)
+	sum = len(lines)
+	return sum
 }

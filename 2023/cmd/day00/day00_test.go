@@ -4,8 +4,14 @@ import (
 	"testing"
 )
 
+func TestS1(t *testing.T) {
+	res := Solve1("0.data")
+	if res != 42 {
+		t.Errorf(" failed was %d expected %d", res, 42)
+	}
+}
 func TestS2(t *testing.T) {
-	res := Solve2("0.data")
+	res := Solve2("1data")
 	if res != 42 {
 		t.Errorf(" failed was %d expected %d", res, 42)
 	}
