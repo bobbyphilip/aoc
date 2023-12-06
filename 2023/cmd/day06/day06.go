@@ -31,14 +31,19 @@ func Solve1(file string) int {
 }
 
 func findWins(totalTime, distance int) int {
-
-	speed := 1
-	time := totalTime - 1
-	for speed*time <= distance {
-		speed++
-		time--
+	h := totalTime / 2
+	l := 1
+	//we want to find h&l where h is the first with a win
+	for h-l > 1 {
+		mid := (h + l) / 2
+		if mid*(totalTime-mid) > distance {
+			h = mid
+		} else {
+			l = mid
+		}
 	}
-	return time - speed + 1
+	// for 1 -7 if 2 -5 are the winners 7-2 -2-1
+	return totalTime - h - (h - 1)
 }
 
 func Solve2(file string) int {
