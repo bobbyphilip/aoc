@@ -13,30 +13,21 @@ import (
 func main() {
 	result := Solve1("2023/cmd/day05/1.data")
 	fmt.Printf("day 05 part 1 %d \n", result)
-	result = Solve2("2023/cmd/day05/1.data")
+	result = Solve2("2023/cmd/day05/0.data")
 	fmt.Printf("day 05 part 2 %d \n", result)
 }
 
 func Solve1(file string) int {
 	min := math.MaxInt64
 	lines := utils.ReadFile((file))
-
-	seedSoil := map[int]int{}
-	soilFer := map[int]int{}
-	ferWater := map[int]int{}
-	waterLight := map[int]int{}
-	lightTemp := map[int]int{}
-	tempHumidity := map[int]int{}
-	humidityLoc := map[int]int{}
-
 	maps := []map[int]int{
-		seedSoil,
-		soilFer,
-		ferWater,
-		waterLight,
-		lightTemp,
-		tempHumidity,
-		humidityLoc,
+		{},
+		{},
+		{},
+		{},
+		{},
+		{},
+		{},
 	}
 
 	sortedMapKeys := make([][]int, 7)
@@ -101,22 +92,14 @@ func Solve2(file string) int {
 
 	seedStrings := strings.Split(strings.Split(lines[0], ": ")[1], " ")
 
-	seedSoil := map[int]int{}
-	soilFer := map[int]int{}
-	ferWater := map[int]int{}
-	waterLight := map[int]int{}
-	lightTemp := map[int]int{}
-	tempHumidity := map[int]int{}
-	humidityLoc := map[int]int{}
-
 	maps := []map[int]int{
-		seedSoil,
-		soilFer,
-		ferWater,
-		waterLight,
-		lightTemp,
-		tempHumidity,
-		humidityLoc,
+		{},
+		{},
+		{},
+		{},
+		{},
+		{},
+		{},
 	}
 
 	sortedMapKeys := make([][]int, 7)
