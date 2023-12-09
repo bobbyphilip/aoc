@@ -3,8 +3,6 @@ package main
 import (
 	"aoc/internal/utils"
 	"fmt"
-	"strconv"
-	"strings"
 )
 
 func main() {
@@ -18,11 +16,7 @@ func Solve1(file string) int {
 	sum := 0
 	lines := utils.ReadFile((file))
 	for _, line := range lines {
-		nums := []int{}
-		for _, str := range strings.Split(line, " ") {
-			num, _ := strconv.Atoi(str)
-			nums = append(nums, num)
-		}
+		nums := utils.ReadNumbersFromLine(line)
 		sum += nextNumber(nums, true)
 	}
 	return sum
@@ -55,11 +49,7 @@ func Solve2(file string) int {
 	sum := 0
 	lines := utils.ReadFile((file))
 	for _, line := range lines {
-		nums := []int{}
-		for _, str := range strings.Split(line, " ") {
-			num, _ := strconv.Atoi(str)
-			nums = append(nums, num)
-		}
+		nums := utils.ReadNumbersFromLine(line)
 		sum += nextNumber(nums, false)
 	}
 	return sum
