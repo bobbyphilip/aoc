@@ -4,8 +4,8 @@ import (
 	"bufio"
 	"log"
 	"os"
-	"regexp"
 	"strconv"
+	"strings"
 )
 
 func ReadFile(path string) []string {
@@ -66,8 +66,7 @@ func GetAllNeighbouringPoints(x, y, w, h, gridW, gridH int, diagonals bool) [][2
 }
 
 func ReadNumbersFromLine(line string) []int {
-	re := regexp.MustCompile(`-?\d+`)
-	strs := re.FindAllString(line, -1)
+	strs := strings.Fields(line)
 	nums := make([]int, len(strs))
 	for i, str := range strs {
 		nums[i], _ = strconv.Atoi(str)

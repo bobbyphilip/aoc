@@ -4,8 +4,6 @@ import (
 	"aoc/internal/utils"
 	"fmt"
 	"slices"
-	"strconv"
-	"strings"
 )
 
 func main() {
@@ -20,14 +18,9 @@ func Solve1(file string) int {
 	left := []int{}
 	right := []int{}
 	for _, line := range lines {
-		l := strings.Fields(line)
-
-		lInt, _ := strconv.Atoi(l[0])
-		left = append(left, lInt)
-
-		rInt, _ := strconv.Atoi(l[1])
-		right = append(right, rInt)
-
+		numbers := utils.ReadNumbersFromLine(line)
+		left = append(left, numbers[0])
+		right = append(right, numbers[1])
 	}
 	slices.Sort(left)
 	slices.Sort(right)
@@ -47,14 +40,9 @@ func Solve2(file string) int {
 	left := []int{}
 	right := []int{}
 	for _, line := range lines {
-		l := strings.Fields(line)
-
-		lInt, _ := strconv.Atoi(l[0])
-		left = append(left, lInt)
-
-		rInt, _ := strconv.Atoi(l[1])
-		right = append(right, rInt)
-
+		numbers := utils.ReadNumbersFromLine(line)
+		left = append(left, numbers[0])
+		right = append(right, numbers[1])
 	}
 	rightCounts := make(map[int]int)
 	for _, val := range right {
