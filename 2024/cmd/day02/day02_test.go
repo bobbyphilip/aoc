@@ -6,8 +6,8 @@ import (
 
 func TestS1(t *testing.T) {
 	res := Solve1("0.data")
-	if res != 11 {
-		t.Errorf(" failed was %d expected %d", res, 11)
+	if res != 2 {
+		t.Errorf(" failed was %d expected %d", res, 2)
 	}
 }
 
@@ -25,7 +25,7 @@ func BenchmarkS2(b *testing.B) {
 
 func TestS2(t *testing.T) {
 	res := Solve2("0.data")
-	if res != 31 {
-		t.Errorf(" failed was %d expected %d", res, 31)
+	if res != 4 {
+		t.Errorf(" failed was %d expected %d", res, 4)
 	}
 }
